@@ -3,7 +3,7 @@
 #include <yaml-cpp/yaml.h>
 
 #define ELPP_NO_DEFAULT_LOG_FILE
-#include <../../include/easylogging++.h>
+#include <easylogging++.h>
 INITIALIZE_EASYLOGGINGPP
 
 namespace NetworkedClient

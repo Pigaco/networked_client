@@ -4,14 +4,14 @@ cmake_minimum_required(VERSION 2.8)
 include(ExternalProject)
 include(FindPkgConfig)
 
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 SET(SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/)
 SET(HDR ${CMAKE_CURRENT_SOURCE_DIR}/include/)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../libpiga/ ${CMAKE_CURRENT_BINARY_DIR}/piga/)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/libpiga/)
 
 SET(HDRS
     ${HDR}/NetworkedClient/Application.hpp
@@ -100,6 +100,7 @@ target_link_libraries(client piga)
 target_link_libraries(networked_client piga)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # Activate C++11
 list(APPEND CMAKE_CXX_FLAGS "-std=c++11 -lrt -ldl ${CMAKE_CXX_FLAGS}")

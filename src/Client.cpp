@@ -1,6 +1,6 @@
 #include <NetworkedClient/Client.hpp>
 
-#include <../../include/easylogging++.h>
+#include <easylogging++.h>
 #include <libpiga_handshake.pb.h>
 #include <login.pb.h>
 #include <input.pb.h>

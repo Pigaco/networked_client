@@ -15,7 +15,7 @@ namespace NetworkedClient
     {
         public:
             Application();
-            ~Application();
+            virtual ~Application();
 
             void parseConfig(const std::string &configFile);
             void init();

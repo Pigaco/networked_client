@@ -28,9 +28,8 @@ namespace NetworkedClient
             {
                 public:
                     PlayerNotFound(const char *message = "Player not found!");
-                    virtual ~PlayerNotFound();
 
-                    virtual const char* what() const;
+                    virtual const char* what() const noexcept;
                 private:
                     const char* m_msg;
             };

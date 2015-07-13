@@ -54,7 +54,7 @@ namespace NetworkedClient
     {
 
     }
-    const char *PlayerManager::PlayerNotFound::what() const noexcept
+    const char *PlayerManager::PlayerNotFound::what() const
     {
         return m_msg;
     }

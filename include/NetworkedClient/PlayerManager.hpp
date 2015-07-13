@@ -24,17 +24,16 @@ namespace NetworkedClient
             PlayerMap& getPlayers();
             unsigned int size();
 
-            class PlayerNotFound : std::exception
+            class PlayerNotFound : public std::exception
             {
                 public:
                     PlayerNotFound(const char *message = "Player not found!");
                     virtual ~PlayerNotFound();
 
-                    virtual const char* what() const noexcept;
+                    virtual const char* what() const;
                 private:
                     const char* m_msg;
             };
-
         private:
             PlayerMap m_players;
     };
